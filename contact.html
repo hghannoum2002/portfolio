@@ -64,13 +64,29 @@
 	        </div>
 	        <div class="row block-9">
 	          <div class="col-md-12">
-	           <form id="contact-form">
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <input type="text" name="subject" placeholder="Subject" required>
-  <textarea name="message" placeholder="Message" required></textarea>
-  <button type="submit">Send Message</button>
-</form>
+	          <div class="row block-9">
+  <div class="col-md-12">
+    <form id="contact-form">
+      <div class="form-group">
+        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+      </div>
+      <div class="form-group">
+        <textarea name="message" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary py-3 px-5">Send Message</button>
+      </div>
+      <p id="status" style="text-align:center;"></p>
+    </form>
+  </div>
+</div>
+
 
 <p id="status"></p>
 	          </div>
