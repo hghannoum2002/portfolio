@@ -25,106 +25,47 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-
-	<div id="colorlib-page">
-		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
-		<aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
-			<h1 id="colorlib-logo"><a href="index.html">Halima<span>.</span></a></h1>
-			<nav id="colorlib-main-menu" role="navigation">
-				<ul>
-					
-					<li><a href="index.html">About</a></li>
-					<li><a href="Projects.html">Projets</a></li>
-					<li><a href="Skills.html">Skills</a></li>
-					<li><a href="Experience.html">Experience</a></li>
-					<li class="colorlib-active"><a href="contact.html">Contact</a></li>
-				</ul>
-			</nav>
-
-		</aside>
-		<div id="colorlib-main">
-			<section class="ftco-section contact-section">
-	      <div class="container">
-	        <div class="row d-flex mb-5 contact-info">
-	          <div class="col-md-12 mb-4">
-	            <h2 class="h4 font-weight-bold">Contact Information</h2>
-	          </div>
-	          <div class="w-100"></div>
-	          <div class="col-md-3">
-	            <p><span>Address:</span> Gardanne, France</p>
-	          </div>
-	          <div class="col-md-3">
-	            <p><span>Phone:</span> <a href="tel://1234567920">+33 07 65 55 24 27</a></p>
-	          </div>
-	          <div class="col-md-3">
-	            <p><span>Email:</span> <a href="mailto:info@yoursite.com">halima.ghannoum@etu.emse.fr</a></p>
-	          </div>
-	        </div>
-	        <div class="row block-9">
-	          <div class="col-md-12">
-	           <form action="send_email.php" method="POST">
-  <div class="form-group">
-    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-  </div>
-  <div class="form-group">
-    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-  </div>
-  <div class="form-group">
-    <input type="text" name="subject" class="form-control" placeholder="Subject" required>
-  </div>
-  <div class="form-group">
-    <textarea name="message" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
-  </div>
-  <div class="form-group">
-    <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-  </div>
-</form>
-
-	          </div>
-	        </div>
-	      </div>
-	    </section>
-	</div>
-
-
-		<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get form data and sanitize
-    $name = htmlspecialchars(trim($_POST['name']));
-    $email = htmlspecialchars(trim($_POST['email']));
-    $subject = htmlspecialchars(trim($_POST['subject']));
-    $message = htmlspecialchars(trim($_POST['message']));
-
-    // Recipient email
-    $to = "halima.ghannoum@etu.emse.fr"; // <-- Change to your email
-
-    // Email headers
-    $headers = "From: $name <$email>\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-Type: text/plain; charset=utf-8\r\n";
-
-    // Email body
-    $body = "Name: $name\n";
-    $body .= "Email: $email\n";
-    $body .= "Subject: $subject\n\n";
-    $body .= "Message:\n$message\n";
-
-    // Send email
-    if (mail($to, $subject, $body, $headers)) {
-        echo "<p>Message sent successfully!</p>";
-    } else {
-        echo "<p>Failed to send message. Please try again.</p>";
+ 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      text-align: center;
+      padding: 50px;
     }
-} else {
-    echo "<p>Invalid request.</p>";
-}
-?>
+    h1 {
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
 
+  <h1>Contact Me</h1>
+  <p>You can reach me at:</p>
+  <p>Email: <a href="mailto:halima.ghannoum@etu.emse.fr">halima.ghannoum@etu.emse.fr</a></p>
+  <p>Phone: <a href="tel:+33765552427">+33 07 65 55 24 27</a></p>
+  <p>Feel free to get in touch!</p>
 
+</body>
+</html>
 
-  </body>
   <script src="js/jquery.min.js"></script>
 <script src="js/jquery-migrate-3.0.1.min.js"></script>
 <script src="js/popper.min.js"></script>
